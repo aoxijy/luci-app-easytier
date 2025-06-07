@@ -85,7 +85,7 @@ jobs:
         if: ${{ github.event.inputs.tag != '' }}
         uses: softprops/action-gh-release@v2
         with:
-            token: ${{ secrets.GITHUB_TOKEN }}
+            token: ${{ secrets.MY_GITHUB_TOKEN }}
             body: |
 
              - 其中 **`openwrt-22.03`** 里面是ipk安装包 **`SNAPSHOT`** 里面是apk安装包
