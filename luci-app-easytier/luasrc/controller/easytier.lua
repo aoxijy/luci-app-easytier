@@ -47,6 +47,8 @@ function index()
 		return
 	end
 	
+	entry({"admin", "services"}, firstchild(), "services", 45).dependent = false
+	entry({"admin", "services", "easytier"}, firstchild(),_("EasyTier"), 46).dependent = true
 	entry({"admin", "services", "easytier", "status"}, cbi("easytier_status"),_("Status"), 1).leaf = true
 	entry({"admin", "services", "easytier", "config"}, cbi("easytier"),_("EasyTier Core"), 2).leaf = true
 	entry({"admin", "services", "easytier", "webconsole"}, template("easytier/easytier_web"),_("EasyTier Web"), 3).leaf = true
